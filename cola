@@ -1,0 +1,15 @@
+int main() {
+    queue<int> cola;
+    int cant_datos;
+    cin >> cant_datos;
+    for (int i = 0; i < catidad_datos; ++i) {
+        int dato;
+        cin >> dato;
+        cola.push(dato);
+    }
+    while (!cola.empty()) {
+        cout << cola.front() << endl;
+        cola.pop();
+    }
+    return 0;
+}
