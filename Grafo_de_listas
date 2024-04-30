@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+int main() {
+    // número de nodos del grafo.
+    int numNodos;
+    cin >> numNodos;
+    vector<int> grafo[numNodos]; // Lista de adyacencia para representar el grafo
+    int numAristas;
+    cin >> numAristas;
+    for (int i = 0; i < numAristas; i++) {
+        int nodoInicial, nodoFinal;
+        cin >> nodoInicial >> nodoFinal;
+        // Añadir el nodo final a la lista del nodo inicial para representar una arista.
+        grafo[nodoInicial].push_back(nodoFinal);
+    }
+    // Imprimir la lista de adyacencia del grafo
+    for (int i = 0; i < numNodos; i++) {
+        // Imprimir el nodo conectado al nodo i
+        for (int j = 0; j < grafo[i].size(); j++) {
+            cout << "[" << grafo[i][j] << "]";
+        }
+        cout << endl;
+    }
+    return 0; 
+}
