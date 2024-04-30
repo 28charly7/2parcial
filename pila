@@ -1,0 +1,14 @@
+int main() {
+    // Crear una pila
+    int num_datos;
+    stack<int> pila;
+    cin>>num_datos;
+    for (int  i = 0; i<num_datos;i++){
+    int datos; cin>>datos;
+    pila.push(datos);
+}
+    // Imprimir la pila
+    while (!pila.empty()) {
+        cout << pila.top() <<endl;
+        pila.pop();
+    }
